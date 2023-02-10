@@ -15,5 +15,4 @@ source('R/backtest function.R')
 
 # Read data and params ---------------------------------------------------------
 params <- read_yaml('portafolios.yml')
-
 funds <- read_excel(path = "data/returns.xlsx", sheet = 'returns')
