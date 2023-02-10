@@ -1,23 +1,3 @@
-library(readxl)
-library(tidyr)
-library(PerformanceAnalytics)
-library(yaml)
-library(pander)
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(reactable)
-library(data.table)
-library(lubridate)
-
-source('R/backtest function.R')
-
-
-# Read data and params ---------------------------------------------------------
-params <- read_yaml('portafolios.yml')
-
-funds <- read_excel(path = "data/returns.xlsx", sheet = 'returns')
-
 #force dates to end of month dates. This is useful if you have for example
 # 1970-12-01 and 1970-12-31 in the same file, because you joined files with
 # multiple monthly formats.
@@ -116,18 +96,5 @@ for(iLoop  in 1:length(portfolios)) {
   row.names(port$table) <- NULL
   
   portfolios[[iLoop]] <- port 
-
-tables <- list()
-tables$summary_stats <- pivot_wider(case_stats(portfolios),names_from = variable)
-reactable::reactable(tables$summary_stats
-                     ,outlined = FALSE,highlight = TRUE
-                     ,columns = list(
-                       portfolio = colDef(minWidth = 120)
-                       ,Growth = colDef(format = colFormat(percent = TRUE,digits = 0,locales = "en-US"))
-                       ,CAGR = colDef(format = colFormat(percent = TRUE, digits = 2,locales = "en-US"))
-                       ,maxDD = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US"))
-                       ,Vol = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US"))
-                       , Sharpe = colDef(format = colFormat(digits = 1,locales = "en-US"))
-                       , Calmar = colDef(format = colFormat(digits = 1,locales = "en-US"))))
-
 }
+
