@@ -10,3 +10,9 @@ summary_table <- reactable::reactable(tables$summary_stats
                        ,Vol = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US"))
                        , Sharpe = colDef(format = colFormat(digits = 1,locales = "en-US"))
                        , Calmar = colDef(format = colFormat(digits = 1,locales = "en-US"))))
+
+
+
+stocks = t(as.matrix(case_returns))
+D1 <- diss(stocks, "COR")
+C1 <- hclust(D1)

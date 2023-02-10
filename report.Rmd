@@ -126,3 +126,10 @@ chart.Boxplot(portfolio_data_xts(portfolios))
 chart.RiskReturnScatter(portfolio_data_xts(portfolios))
 ```
 
+
+# Clustering analysis
+
+```{r}
+plot(C1)
+```
+

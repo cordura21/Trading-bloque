@@ -1,14 +1,10 @@
 Params:
-  Period: "2000::"
+  Period: "::"
   Rebalance: years
   ShowComponents: TRUE
-Chesapeake:
-  Chesa: 1
 Mulvaney:
   Mulvaney: 1
 Dunn:
   Dunn WMA: 1
 Transtrend (Enhanced):
   Transtrend Enhanced: 1
-Benchmark 5 asset:
-  Bmk 5: 1
