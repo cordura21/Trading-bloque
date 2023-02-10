@@ -1,0 +1,9 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Mulvaney:
+  Mulvaney: 1
+Mulvaney at 20%:
+  Mulvaney: .2
+  Uninvested: .8

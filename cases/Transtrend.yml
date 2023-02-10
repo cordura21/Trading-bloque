@@ -4,3 +4,7 @@ Params:
   ShowComponents: TRUE
 Transtrend:
   Transtrend Enhanced: 1
+Transtrend at 20%:
+  Transtrend Enhanced: .2
+  Uninvested: .8
+  
