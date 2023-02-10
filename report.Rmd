@@ -1,0 +1,122 @@
+---
+title: "Portfolio Backtest"
+author: "apetro"
+date: "2023-02-07"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: true
+    css: style.css
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(fig.width=10, fig.height=7)
+```
+
+---
+title: "`r case_to_run` backtest"
+---
+# Summary Table
+
+Starting at `r first(index(case_returns))`.
+ Ending at `r last(index(case_returns))`.
+ Number of periods `r length(index(case_returns))`.
+ Periodicity is  `r periodicity(case_returns)[6]`.
+
+```{r}
+
+summary_table
+
+```
+
+
+# Base 100 (money)
+```{r}
+library(dygraphs)
+
+p  <- list()
+  p[[1]] = dygraphs::dygraph(portfolio_data_xts(portfolios,data.name = 'cum_return'),
+                             main = "Cumulative Return", group = "A") %>% 
+    dyRebase(value = params$global.settings$starting.capital) %>%
+    dyRangeSelector() %>%  dyOptions(colors = RColorBrewer::brewer.pal(6, "Set2")) %>%
+    dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>% dyAxis("y",logscale = TRUE)
+
+
+
+htmltools::tagList(p)
+```
+
+# Base 100 (Percent)
+```{r}
+library(dygraphs)
+
+p  <- list()
+  p[[1]] = dygraphs::dygraph(portfolio_data_xts(portfolios,data.name = 'cum_return'),
+                             main = "Cumulative Return", group = "A") %>% 
+    dyRebase(percent = TRUE) %>%
+    dyRangeSelector() %>%  dyOptions(colors = RColorBrewer::brewer.pal(6, "Set2")) %>%
+    dyHighlight(highlightSeriesOpts = list(strokeWidth = 3))
+
+
+
+htmltools::tagList(p)
+```
+
+# Static charts
+
+```{r}
+library(ggplot2)
+
+
+for(study in params$chart.settings$chart_studies){
+  study_plot <- ggplot(portfolio_data(portfolios,data.name = study) , 
+                       aes(x=date, y = value, color = name)) + geom_line() +
+    theme_bw() + ggtitle(study) + geom_hline(yintercept = 0) 
+  if(params$chart.settings$facets){
+    study_plot <- study_plot  + facet_wrap(~name, scales = params$chart.settings$facets_scales)
+  }
+  
+    if(params$chart.settings$facets){
+    study_plot <- study_plot  + theme(legend.position = 'none')
+    }
+  
+  print(study_plot)
+
+}
+
+```
+
+
+
+
+# Interactive charts
+```{r}
+library(dygraphs)
+
+p  <- list()
+for(study in params$chart.settings$chart_studies){
+  p[[study]] = dygraphs::dygraph(portfolio_data_xts(portfolios,data.name = study),main = study, group = "A") %>%
+        dyHighlight(highlightSeriesOpts = list(strokeWidth = 3)) %>%
+    dyOptions(colors = RColorBrewer::brewer.pal(6, "Set2"))
+}
+
+
+htmltools::tagList(p)
+```
+
+# Relation analysis
+
+```{r}
+if(length(names((portfolio_data_xts(portfolios)))) >1){
+  chart.Correlation(portfolio_data_xts(portfolios)) 
+}
+
+
+chart.Boxplot(portfolio_data_xts(portfolios))
+
+chart.RiskReturnScatter(portfolio_data_xts(portfolios))
+```
+
