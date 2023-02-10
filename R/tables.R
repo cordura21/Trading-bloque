@@ -4,7 +4,7 @@ summary_table <- reactable::reactable(tables$summary_stats
                      ,outlined = FALSE,highlight = TRUE
                      ,columns = list(
                        portfolio = colDef(minWidth = 120)
-                       ,Growth = colDef(format = colFormat(percent = TRUE,digits = 0,locales = "en-US"))
+                       ,Growth = colDef(format = colFormat(digits = 1,locales = "en-US",prefix  = 'x'))
                        ,CAGR = colDef(format = colFormat(percent = TRUE, digits = 2,locales = "en-US"))
                        ,maxDD = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US"))
                        ,Vol = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US"))
