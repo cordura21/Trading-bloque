@@ -1,0 +1,143 @@
+RunThisCase: Transtrend
+###############################################################
+global.settings:
+  FastRun: TRUE
+  starting.capital: 1000
+  force.end.of.months: TRUE
+chart.settings:
+  facets: TRUE
+  facets_scales: fixed
+  chart_studies:
+    - cum_return
+    - Rolling_sharpe_36
+    - drawdown
+    - running_volatility
+    - roll_return_36
+###############################################################
+Benchmark:
+  Params:
+    Name: This is the benchmark
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Just Cash:
+    Cash: 1
+  Benchmark:
+    Bmk 5: 1
+  No Cash and Benchmark at 20%:
+    Bmk 5: .2
+    Uninvested: .8
+  Cash and Benchmark at 20%:
+    Bmk 5: .2
+    Cash: .8
+  Dunn Capital:
+    DUNN Capital Mgmt. (WMA): 1
+  Old School:
+    Chesapeake Capital Corp. (Divers.): .5
+    Mulvaney Capital Mgmt. (Gl. Markets): .5
+
+Benchmark Only:
+  Params:
+    Name: This is the benchmark
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Benchmark at 20%:
+    Cash: .8
+    Bmk 5: .2    
+  Full Benchmark:
+    Bmk 5: 1
+Benchmark with TF Funds:
+  Params:
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Benchmark:
+    Bmk 5: 1
+  50 / 50 Bill Dunn:
+    Bmk 5: .5
+    DUNN Capital Mgmt. (WMA): .5
+  50 / 50 Mulvaney:
+    Bmk 5: .5
+    Mulvaney Capital Mgmt. (Gl. Markets): .5
+  50 / 50 Chesapeake:
+    Bmk 5: .5
+    Chesapeake Capital Corp. (Divers.): .5
+Chesa:
+  Params:
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Chesa:
+    Chesa: 1
+  Chesa Plus:
+    Chesa Plus: 1
+  Bmk 5 Activos:
+    Bmk 5: 1
+  Bmk + Chesa+ al 20%:
+    Bmk 5: .80
+    Chesa Plus: .2
+Chesa Alone:
+  Params:
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Chesa Plus:
+    Chesa Plus: 1
+  Benchmark:
+    Bmk 5: 1
+  Mix 80-20:
+    Chesa Plus: .2
+    Bmk 5: .8
+Bill Dunn:
+  Params:
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Dunn WMA:
+    Dunn WMA: 1
+  Benchmark:
+    Bmk 5: 1
+  Mix 80-20:
+    Dunn WMA: .2
+    Bmk 5: .8
+Old Schoolers:
+  Params:
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Dunn WMA:
+    Dunn WMA: 1
+  Chesa Plus:
+    Chesa Plus: 1
+  Mulvaney:
+    Mulvaney: 1
+Old Schoolers 20% Mix:
+  Params:
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Bmk + Dunn WMA:
+    Dunn WMA: .2
+    Bmk 5: .8
+  Bmk + Chesa Plus:
+    Chesa Plus: .2
+    Bmk 5: .8
+  Bmk + Mulvaney:
+    Mulvaney: .2
+    Bmk 5: .8
+  Benchmark:
+    Bmk 5: 1
+Transtrend:
+  Params:
+    Period: "::"
+    Rebalance: years
+    ShowComponents: TRUE
+  Transtrend:
+    Transtrend Enhanced: 1
+  Benchmark:
+    Bmk 5: 1
+  Mix 80/20:
+    Transtrend Enhanced: .20
+    Bmk 5: .8
+    
