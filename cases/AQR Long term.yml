@@ -1,0 +1,12 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Equities:
+  Equity Indices (AQR): 1
+Fixed Income:
+  Fixed Income Indices (AQR): 1
+60 Equity 40 Fixed Income:
+  Equity Indices (AQR): .6
+  Fixed Income Indices (AQR): .4
+
