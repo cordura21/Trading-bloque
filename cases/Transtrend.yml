@@ -1,0 +1,6 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Transtrend:
+  Transtrend Enhanced: 1

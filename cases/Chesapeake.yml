@@ -2,5 +2,8 @@ Params:
   Period: "::"
   Rebalance: years
   ShowComponents: TRUE
-Benchmark:
-  Bmk 5: 1
+Chesapeake:
+  Chesa: 1
+Chesapeake at 20%:
+  Chesa: .2
+  Uninvested: .8
