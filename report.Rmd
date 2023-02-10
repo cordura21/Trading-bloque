@@ -12,7 +12,13 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(
+	echo = TRUE,
+	fig.height = 7,
+	fig.width = 10,
+	message = FALSE,
+	warning = FALSE
+)
 knitr::opts_chunk$set(fig.width=10, fig.height=7)
 ```
 

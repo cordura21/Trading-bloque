@@ -1,0 +1,6 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Benchmark:
+  Bmk 5: 1

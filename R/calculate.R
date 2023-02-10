@@ -1,25 +1,15 @@
-#force dates to end of month dates. This is useful if you have for example
-# 1970-12-01 and 1970-12-31 in the same file, because you joined files with
-# multiple monthly formats.
-
-if(params$global.settings$force.end.of.months == TRUE){
-  funds$date <- lubridate::ceiling_date(funds$date, "month") - 1
-}
-
-funds <- funds %>% pivot_wider(names_from = ticker, values_from = rets) %>%
-  mutate(date = as.Date(date))
-funds$Uninvested <- 0
-names(funds)[1] <- 'date'
-
-funds <- xts(funds[,-1],funds$date)
 
 
 # Read case data, prepare case assets ------------------------------------------
 
+select_file <- file.choose() 
+selected_case <- read_yaml(select_file)
 
-case_to_run <- params$RunThisCase
-case_params <- params[[case_to_run]][[1]]
-portfolios<- params[[case_to_run]][2:length(params[[case_to_run]])]
+
+case_to_run <- select_file %>% basename() %>% stringr::str_remove(".yml")
+
+case_params <- selected_case[[1]]
+portfolios <- selected_case[2:length(selected_case)]
 
 # Create a list of all the assets in every portfolio on the case
 case_assets <- character()

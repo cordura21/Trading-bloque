@@ -1,3 +1,6 @@
+
+
+
 library(tbl2xts)
 library(tidyr)
 case_stats <- function(portfolios){
