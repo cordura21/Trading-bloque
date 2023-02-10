@@ -12,7 +12,11 @@ summary_table <- reactable::reactable(tables$summary_stats
                        , Calmar = colDef(format = colFormat(digits = 1,locales = "en-US"))))
 
 
+investable_assets <- case_returns[,!(names(case_returns) %in% "Uninvested")]
 
-stocks = t(as.matrix(case_returns))
-D1 <- diss(stocks, "COR")
-C1 <- hclust(D1)
+if(NCOL(investable_assets) > 1){
+  stocks = t(as.matrix(investable_assets))
+  D1 <- diss(stocks, "COR")
+  C1 <- hclust(D1)  
+}
+

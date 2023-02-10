@@ -7,4 +7,11 @@ Benchmark:
 Benchmark at 20%:
   Bmk 5: .20
   Uninvested: .8
-  
+Benchmark at 20% and cash:
+  Bmk 5: .20
+  Cash: .8
+Benchmark, Cheapeake and cash:
+  Bmk 5: .20
+  Chesa: .20
+  Cash: .6
+
