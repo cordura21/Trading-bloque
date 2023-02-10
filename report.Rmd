@@ -22,15 +22,24 @@ knitr::opts_chunk$set(
 knitr::opts_chunk$set(fig.width=10, fig.height=7)
 ```
 
+```{r}
+first_year <- year(first(index(case_returns)))
+last_year <- year(last(index(case_returns)))
+```
+
 ---
-title: "`r case_to_run` backtest"
+title: "`r paste0(first_year,"-",last_year,": ",case_to_run)` backtest"
 ---
-# Summary Table
+# `r first_year` - `r last_year`
 
 Starting at `r first(index(case_returns))`.
  Ending at `r last(index(case_returns))`.
  Number of periods `r length(index(case_returns))`.
  Periodicity is  `r periodicity(case_returns)[6]`.
+ 
+# Summary Table
+
+
 
 ```{r}
 
@@ -130,6 +139,6 @@ chart.RiskReturnScatter(portfolio_data_xts(portfolios))
 # Clustering analysis
 
 ```{r}
-plot(C1)
+try(plot(C1))
 ```
 
