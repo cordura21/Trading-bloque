@@ -1,0 +1,10 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Benchmarks:
+  SPXT.INDEX: .2
+  SPGSCITR.INDEX: .2
+  NDDUEAFE.Index: .2
+  LT51TRUU.INDEX: .2
+  FNCOTR.INDEX: .2
