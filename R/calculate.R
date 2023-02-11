@@ -30,8 +30,13 @@ for(iLoop  in 1:length(portfolios)) {
   port$data$running_volatility <- TTR::runSD(port$data$portfolio_returns,n = 36) * sqrt(12)
   names(port$data$running_volatility) <- names(portfolios)[iLoop]  
   # Add portfolio contribution by asset to the stats
-  port$stats$total_contribution <- to.period.contributions(port$lists$portfolio_returns_verbose$contribution
-                                                           , period="all")
+  port$stats$total_contribution <- to.period.contributions(port$lists$portfolio_returns_verbose$contribution, period="all")
+  current_contribution <- port$stats$total_contribution
+  current_contribution <- current_contribution[,1:(NCOL(current_contribution)-1)]
+  current_contribution <- current_contribution %>% xts_tbl()
+  current_contribution <- current_contribution %>% pivot_longer(-date) %>%
+    mutate(portfolio = names(portfolios)[iLoop])
+  port$stats$total_contribution <- current_contribution
   
   port$data$cum_return <- cumprod(1+port$data$portfolio_returns)
   port$data$roll_return_12 <- TTR::ROC(x = port$data$cum_return,n = 12)

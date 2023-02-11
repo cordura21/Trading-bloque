@@ -1,0 +1,20 @@
+Params:
+  Name: This is the benchmark
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Just Cash:
+  Cash: 1
+Benchmark:
+  Bmk 5: 1
+No Cash and Benchmark at 20%:
+  Bmk 5: .2
+  Uninvested: .8
+Cash and Benchmark at 20%:
+  Bmk 5: .2
+  Cash: .8
+Dunn Capital:
+  DUNN Capital Mgmt. (WMA): 1
+Old School:
+  Chesapeake Capital Corp. (Divers.): .5
+  Mulvaney Capital Mgmt. (Gl. Markets): .5

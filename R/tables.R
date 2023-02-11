@@ -20,3 +20,15 @@ if(NCOL(investable_assets) > 1){
   C1 <- hclust(D1)  
 }
 
+contribution_table <- list()
+for(i in 1:length(portfolios)){
+  contribution_table[[i]] <- portfolios[[i]]$stats$total_contribution
+}
+
+contribution_table <- bind_rows(contribution_table) %>%
+  arrange(portfolio) %>% group_by(portfolio) %>%
+  arrange(value) %>%
+  reactable(groupBy = 'portfolio'
+            , columns = list(value = colDef(aggregate = 'sum',format = colFormat(digits = 1,
+                                            locales = "en-US"))))
+
