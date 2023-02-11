@@ -1,5 +1,5 @@
 Params:
-  Period: "2020::"
+  Period: ""
   Rebalance: years
   ShowComponents: TRUE
 Chesapeake:
@@ -12,3 +12,8 @@ Dunn:
   Dunn WMA: 1
 Transtrend (Enhanced):
   Transtrend Enhanced: 1
+Mix:
+  Chesa: .25
+  Mulvaney: .25
+  Dunn WMA: .25
+  Transtrend Enhanced: .25
