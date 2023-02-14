@@ -38,8 +38,21 @@ day(iasg_data$date) <- 1
 iasg_data$value <- iasg_data$Return / 100
 iasg_data <- iasg_data %>% select(date,name,value)
 iasg_data$source <- 'iasg csv files'
-rets$iasg <- iasg_data
+rets$iasg <- iasg_data 
 
+# CSV BBG import -------------------------------------------------------------
+csv_files <- list.files('data importers/bloomberg csv/',pattern = '*.csv')
+csv_data <- data.frame()
+
+for(file in csv_files){
+  print(file)
+  curr_file <- csv_files[file]
+  curr_file_contents <- read.csv(file.path('data importers/bloomberg csv/',file))
+  csv_data <- rbind(csv_data,curr_file_contents)
+}
+
+rets$csv_data <- csv_data %>% as_tibble() %>% 
+  mutate(date = as.Date(date),name = as.character(name),source = as.character(source))
 
 # Join all inputs and save ------------------------------------------------
 output_data <- bind_rows(rets)
