@@ -2,9 +2,11 @@
 
 ## Libraries
 library(Rbbg)
+library(yaml)
+library(dplyr)
 
 ## Get YAML  params
-bbg.params <- read_yaml('data importers//bbg_tickers.yml')
+bbg.params <- read_yaml('data importers//bloomberg csv//bbg_tickers.yml')
 
 ## Connect to bloomberg data
 conn <- blpConnect(throw.ticker.errors = FALSE)

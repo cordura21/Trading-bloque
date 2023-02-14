@@ -1,0 +1,48 @@
+SP.ETF:
+  csv.name: SP500.ETF
+  ticker: SPY US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+EEM.ETF:
+  csv.name: EEM.ETF
+  ticker: EEM US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+IYR.ETF:
+  csv.name: IYR.ETF
+  ticker: IYR US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+IEF.ETF:
+  csv.name: IEF.ETF
+  ticker: IEF US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+DBC.ETF:
+  csv.name: DBC.ETF
+  ticker: DBC US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+JerryParkerFund:
+  csv.name: JerryParkerFund
+  ticker: EQCHX US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
