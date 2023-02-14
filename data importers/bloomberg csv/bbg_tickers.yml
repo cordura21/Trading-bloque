@@ -62,3 +62,51 @@ AQR CTA Fund AQMIX:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+SP Total Return Index:
+  csv.name: SP Total Return Index
+  ticker: SPXT Index
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+EM Total Return Index:
+  csv.name: EM Total Return Index
+  ticker: GDUEEGF Index
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+Commodities Total Return Index:
+  csv.name: Commodities Total Return
+  ticker: SPGSCITR Index
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+EAFE Total Return Index:
+  csv.name: EAFE Total Return Index
+  ticker: NDDUEAFE Index
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+Bond US 5-10 yr Total Return Index:
+  csv.name: Bond US 5-10 yr Total Return Index
+  ticker: LT51TRUU INDEX
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+Portfolio 5 Activos Bloomberg:
+  csv.name: Portfolio 5 Activos Bloomberg
+  ticker: .BMK_5 BPB:2246 Index
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
