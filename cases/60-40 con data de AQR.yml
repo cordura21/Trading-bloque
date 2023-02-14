@@ -1,0 +1,15 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Equity AQR Long Term:
+  Equity indices Market: 1
+Fixed Income AQr Long Term:
+  Fixed income Market: 1
+Mix 60-40 (índices AQR):
+  Equity indices Market: .6
+  Fixed income Market: .4
+Mix 48-32-20 Trend Following (índices AQR):
+  Equity indices Market: .48
+  Fixed income Market: .32
+  TSMOM: .20

@@ -1,0 +1,14 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Mulvaney:
+  the-mulvaney-global-markets-fund-performance.csv: 1
+Advanced Trend:
+  crabel-advanced-trend-1x-performance.csv: 1
+AQR AQMIX:
+  AQR CTA Fund (AQMIX): 1
+Mix:
+  the-mulvaney-global-markets-fund-performance.csv: .33
+  crabel-advanced-trend-1x-performance.csv: .33
+  AQR CTA Fund (AQMIX): .33
