@@ -1,0 +1,9 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Chesapeake:
+  diversified-lv--performance.csv: 1
+Chesapeake Mutual Fund:
+  JerryParkerFund: 1
+

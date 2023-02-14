@@ -46,3 +46,11 @@ JerryParkerFund:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+NA Reits:
+  csv.name: FNCOTR
+  ticker: FNCOTR Index
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
