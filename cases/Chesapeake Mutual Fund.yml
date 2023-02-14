@@ -4,6 +4,9 @@ Params:
   ShowComponents: TRUE
 Chesapeake:
   diversified-lv--performance.csv: 1
+Chesapeake Diversified Plus:
+  diversified-plus-hv--performance.csv: 1
 Chesapeake Mutual Fund:
   JerryParkerFund: 1
+
 
