@@ -25,10 +25,10 @@ funds <- read_excel(path = "data/returns.xlsx", sheet = 'returns')
 # multiple monthly formats.
 
 if(params$global.settings$force.end.of.months == TRUE){
-  funds$date <- lubridate::ceiling_date(funds$date, "month") - 1
+  funds$date <- lubridate::ceiling_date(funds$date, "month") - 1 %>% as.Date()
 }
 
-funds <- funds %>% pivot_wider(names_from = ticker, values_from = rets) %>%
+funds <- funds %>% pivot_wider(names_from = name, values_from = value) %>%
   mutate(date = as.Date(date))
 funds$Uninvested <- 0
 names(funds)[1] <- 'date'

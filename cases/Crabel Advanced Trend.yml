@@ -1,0 +1,12 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Crabel AT:
+  crabel-advanced-trend-1x-performance.csv: 1
+Crabel AT at 20%:
+  crabel-advanced-trend-1x-performance.csv: .2
+  Uninvested: .8
+Crabel AT at 20% and cash:
+  crabel-advanced-trend-1x-performance.csv: .2
+  Cash: .8

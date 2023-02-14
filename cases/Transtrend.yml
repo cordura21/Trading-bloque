@@ -2,9 +2,9 @@ Params:
   Period: "::"
   Rebalance: years
   ShowComponents: TRUE
-Transtrend:
-  Transtrend Enhanced: 1
-Transtrend at 20%:
-  Transtrend Enhanced: .2
+Crabel AT:
+  crabel-advanced-trend-1x-performance.csv: 1
+Crabel AT at 20%:
+  crabel-advanced-trend-1x-performance.csv: .2
   Uninvested: .8
   
