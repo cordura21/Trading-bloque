@@ -1,0 +1,11 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Mulvaney:
+  the-mulvaney-global-markets-fund-performance.csv: 1
+Advanced Trend:
+  crabel-advanced-trend-1x-performance.csv: 1
+Mix:
+  the-mulvaney-global-markets-fund-performance.csv: 0.5
+  crabel-advanced-trend-1x-performance.csv: 0.5

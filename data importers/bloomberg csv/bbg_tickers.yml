@@ -54,3 +54,11 @@ NA Reits:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+AQR CTA Fund AQMIX:
+  csv.name: AQR CTA Fund (AQMIX)
+  ticker: AQMIX US Equity
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
