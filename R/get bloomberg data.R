@@ -45,6 +45,8 @@ for(iLoop in 1:length(bbg.params)){
            source = 'Bloomberg') %>% 
     select(date,name,value,source) %>% na.omit() 
   
+  print(temp.csvname)
+  
   ## Write csv
   write.csv(bbg.results,paste0('data importers//bloomberg csv//',temp.csvname,'.csv'),row.names = FALSE)
   

@@ -1,0 +1,18 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+DUNN y Bmk:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.2
+  Benchmark EAFE Indexes: 0.2
+  Uninvested: 0.6
+AQR y Bmk:
+  TSMOM: 0.2
+  Benchmark EAFE Indexes: 0.2
+  Uninvested: 0.6
+Dunn:
+  world-monetary-and-agriculture-program-wma--performance.csv: 1
+AQR:
+  TSMOM: 1
+Bmk EAFE:
+  Benchmark EAFE Indexes: 1

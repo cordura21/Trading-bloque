@@ -1,0 +1,10 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Mulvaney:
+  the-mulvaney-global-markets-fund-performance.csv: 1
+DBMF:
+  DBMF: 1
+AQR:
+  AQR CTA Fund (AQMIX): 1

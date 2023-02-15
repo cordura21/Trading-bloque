@@ -110,3 +110,11 @@ Portfolio 5 Activos Bloomberg:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+DB Managed Futures:
+  csv.name: DBMF
+  ticker: DBMF US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD

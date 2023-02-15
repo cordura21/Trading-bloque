@@ -48,6 +48,7 @@ for(file in iasg_files){
   print(file)
   curr_file <- iasg_files[file]
   curr_file_contents <- read.csv(file.path('data importers/iasg/',file))
+  names(curr_file_contents)[1] <- 'Year' ## Levantaba el .csv con este nombre la columna de year "ï..Year"
   curr_file_contents$name <- file
   iasg_data <- rbind(iasg_data,curr_file_contents)
 }
