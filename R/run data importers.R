@@ -4,7 +4,22 @@ library(readxl)
 library(dplyr)
 library(tidyr)
 library(lubridate)
+library(stringr)
 
+# Winton Multi Strategy Import
+winton <- read.csv('data importers/Winton import/tabula-winton returns.csv')
+names(winton)[2:13] <- 1:12
+winton <- winton[1:13]
+winton <- winton %>% pivot_longer(-year) %>%
+  mutate(date = Sys.Date()
+         , value = value / 100
+         , source = 'winton presentation')
+year(winton$date) <- as.numeric(winton$year )
+month(winton$date) <- as.numeric(winton$name )
+day(winton$date) <- 1
+winton$name <- "Winton Multi Strategy"
+winton <- winton %>% select(date,name,value,source)
+write.csv(winton,file = 'data importers/bloomberg csv/Winton Multi Strategy.csv',row.names = FALSE)
 
 # Lynx Program Import -----------------------------------------------------
 

@@ -1,0 +1,6 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Winton Multi Strategy:
+  Winton Multi Strategy: 1
