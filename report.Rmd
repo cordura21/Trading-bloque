@@ -139,6 +139,17 @@ chart.RiskReturnScatter(portfolio_data_xts(portfolios))
 
 ```{r}
 contribution_table
+
+ggplot(contribution_table_yearly,aes(x= date,y= value,  fill = name)) + geom_bar(stat = 'identity') + facet_wrap(~portfolio, scales = 'free_y') + theme_bw()
+
+
+contribution_table_yearly %>%
+  reactable(groupBy = 'portfolio', searchable = TRUE,
+            , columns = list(value = colDef(name = ' Contribution'
+                                            ,aggregate = 'sum'
+                                            ,format = colFormat(digits = 1,
+                                                                locales = "en-US"))))
+
 ```
 
 # Clustering analysis

@@ -6,24 +6,3 @@ Really Old Schoolers:
   the-mulvaney-global-markets-fund-performance.csv: .33
   world-monetary-and-agriculture-program-wma--performance.csv: .33
   diversified-lv--performance.csv: .33
-Chesapeake:
-  diversified-lv--performance.csv: 1
-Mulvaney:
-  the-mulvaney-global-markets-fund-performance.csv: 1
-Dunn:
-  world-monetary-and-agriculture-program-wma--performance.csv: 1
-Really Old Schoolers at 20%:
-  the-mulvaney-global-markets-fund-performance.csv: .066666666667
-  world-monetary-and-agriculture-program-wma--performance.csv: .066666666667
-  diversified-lv--performance.csv: .066666666667
-  Uninvested: .80
-Really Old Schoolers at 30%:
-  the-mulvaney-global-markets-fund-performance.csv: .1
-  world-monetary-and-agriculture-program-wma--performance.csv: .1
-  diversified-lv--performance.csv: .1
-  Uninvested: .7
-Really Old Schoolers at 4% (20%x20%):
-  the-mulvaney-global-markets-fund-performance.csv: .0133
-  world-monetary-and-agriculture-program-wma--performance.csv: .0133
-  diversified-lv--performance.csv: .0133
-  Uninvested: .96

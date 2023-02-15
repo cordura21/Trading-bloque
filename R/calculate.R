@@ -38,6 +38,15 @@ for(iLoop  in 1:length(portfolios)) {
     mutate(portfolio = names(portfolios)[iLoop])
   port$stats$total_contribution <- current_contribution
   
+  # Add year by year contribution, used in a new chart.
+  port$stats$total_contribution_yearly <- to.period.contributions(port$lists$portfolio_returns_verbose$contribution, period="years")
+  current_contribution_yearly <- port$stats$total_contribution_yearly
+  current_contribution_yearly <- current_contribution_yearly[,1:(NCOL(current_contribution_yearly)-1)]
+  current_contribution_yearly <- current_contribution_yearly %>% xts_tbl()
+  current_contribution_yearly <- current_contribution_yearly %>% pivot_longer(-date) %>%
+    mutate(portfolio = names(portfolios)[iLoop])
+  port$stats$total_contribution_yearly <- current_contribution_yearly
+  
   port$data$cum_return <- cumprod(1+port$data$portfolio_returns)
   port$data$roll_return_12 <- TTR::ROC(x = port$data$cum_return,n = 12)
   port$data$roll_return_24 <- TTR::ROC(x = port$data$cum_return,n = 24)

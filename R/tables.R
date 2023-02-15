@@ -34,3 +34,14 @@ contribution_table <- bind_rows(contribution_table) %>%
                                             ,format = colFormat(digits = 1,
                                             locales = "en-US"))))
 
+
+contribution_table_yearly <- list()
+for(i in 1:length(portfolios)){
+  contribution_table_yearly[[i]] <- portfolios[[i]]$stats$total_contribution_yearly
+}
+
+contribution_table_yearly <- bind_rows(contribution_table_yearly) %>%
+  arrange(portfolio) %>% group_by(portfolio) %>%
+  arrange(desc(value)) 
+
+
