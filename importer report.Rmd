@@ -1,0 +1,45 @@
+---
+title: "Portfolio Backtest"
+author: "apetro"
+date: "2023-02-07"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: true
+    css: style.css
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	fig.height = 7,
+	fig.width = 10,
+	message = FALSE,
+	warning = FALSE
+)
+knitr::opts_chunk$set(fig.width=10, fig.height=7)
+```
+
+# Contribution analysis
+
+```{r}
+
+output_data_stats <- output_data %>% arrange(source,name,date) %>%
+  group_by(source,name) %>%
+  summarise(first_date = dplyr::first(date), last_date = dplyr::last(date)
+            , observations = n(), min = min(value), max = max(value)
+            , nas = sum(is.na (value)))
+
+output_data_stats_sources <- output_data %>% arrange(source,name,date) %>%
+  group_by(source) %>%
+  summarise(first_date = dplyr::first(date), last_date = dplyr::last(date)
+            , observations = n(), min = min(value), max = max(value)
+            , nas = sum(is.na (value)))
+
+library(reactable)
+reactable(output_data_stats_sources)
+reactable(output_data_stats)
+
+```

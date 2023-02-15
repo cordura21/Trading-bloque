@@ -57,3 +57,20 @@ rets$csv_data <- csv_data %>% as_tibble() %>%
 # Join all inputs and save ------------------------------------------------
 output_data <- bind_rows(rets) %>% na.omit()
 write.csv(output_data,'data importers/returns.csv', row.names = FALSE)
+
+output_data_stats <- output_data %>% arrange(source,name,date) %>%
+  group_by(source,name) %>%
+  summarise(first_date = dplyr::first(date), last_date = dplyr::last(date)
+            , observations = n(), min = min(value), max = max(value)
+            , nas = sum(is.na (value)))
+
+output_data_stats_sources <- output_data %>% arrange(source,name,date) %>%
+  group_by(source) %>%
+  summarise(first_date = dplyr::first(date), last_date = dplyr::last(date)
+            , observations = n(), min = min(value), max = max(value)
+            , nas = sum(is.na (value)))
+
+report_path <- file.path('data importers/',paste0(case_to_run,'importer_report.html'))
+
+rmarkdown::render('importer report.Rmd', output_file = report_path)
+
