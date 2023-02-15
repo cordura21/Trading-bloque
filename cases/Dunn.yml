@@ -1,0 +1,7 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Dunn WMA Program:
+  world-monetary-and-agriculture-program-wma--performance.csv: 1
+  

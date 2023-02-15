@@ -40,6 +40,6 @@ output_data_stats_sources <- output_data %>% arrange(source,name,date) %>%
 
 library(reactable)
 reactable(output_data_stats_sources)
-reactable(output_data_stats)
+reactable(output_data_stats, searchable = TRUE, minRows = 100)
 
 ```
