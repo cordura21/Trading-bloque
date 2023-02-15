@@ -27,6 +27,7 @@ first_year <- year(first(index(case_returns)))
 last_year <- year(last(index(case_returns)))
 ```
 
+`r case_params$Description`
 ---
 title: "`r paste0(first_year,"-",last_year,": ",case_to_run)` backtest"
 ---
@@ -140,7 +141,7 @@ chart.RiskReturnScatter(portfolio_data_xts(portfolios))
 ```{r}
 contribution_table
 
-ggplot(contribution_table_yearly,aes(x= date,y= value,  fill = name)) + geom_bar(stat = 'identity') + facet_wrap(~portfolio, scales = 'free_y') + theme_bw()
+ggplot(contribution_table_yearly,aes(x= date,y= value,  fill = name)) + geom_bar(stat = 'identity') + facet_wrap(~portfolio) + theme_bw() + theme(legend.position = 'bottom')
 
 
 contribution_table_yearly %>%
