@@ -1,0 +1,8 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Chesapeake variants:
+  JerryParkerFund: .33
+  diversified-lv--performance.csv: .33                            
+  diversified-plus-hv--performance.csv: .33  
