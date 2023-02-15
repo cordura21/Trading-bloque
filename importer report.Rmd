@@ -4,9 +4,6 @@ author: "apetro"
 date: "2023-02-07"
 output:
   html_document:
-    toc: true
-    toc_float:
-      collapsed: true
     css: style.css
     code_folding: hide
 ---
@@ -22,24 +19,37 @@ knitr::opts_chunk$set(
 knitr::opts_chunk$set(fig.width=10, fig.height=7)
 ```
 
-# Contribution analysis
-
 ```{r}
 
 output_data_stats <- output_data %>% arrange(source,name,date) %>%
   group_by(source,name) %>%
   summarise(first_date = dplyr::first(date), last_date = dplyr::last(date)
-            , observations = n(), min = min(value), max = max(value)
+            , obs = n(), min = min(value), max = max(value), mean = mean(value)
+            , sd = sd(value), median = median(value)
             , nas = sum(is.na (value)))
 
 output_data_stats_sources <- output_data %>% arrange(source,name,date) %>%
   group_by(source) %>%
-  summarise(first_date = dplyr::first(date), last_date = dplyr::last(date)
-            , observations = n(), min = min(value), max = max(value)
+  summarise(funds = length(unique(name)),first_date = dplyr::first(date), last_date = dplyr::last(date)
+            , obs = n(), min = min(value), max = max(value) , mean = mean(value)
+            , sd = sd(value), median = median(value)
             , nas = sum(is.na (value)))
 
 library(reactable)
-reactable(output_data_stats_sources)
-reactable(output_data_stats, searchable = TRUE, minRows = 100)
+reactable(output_data_stats_sources,columns = list(
+  min = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  max = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  sd = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  mean = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  median = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US"))))
+
+reactable(output_data_stats, searchable = TRUE,columns = list(
+  min = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  max = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  sd = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  mean = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US")),
+  median = colDef(format = colFormat(percent = TRUE, digits = 1,locales = "en-US"))))
+
 
 ```
+
