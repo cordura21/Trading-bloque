@@ -118,3 +118,11 @@ DB Managed Futures:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+PIMCO MF:
+  csv.name: PIMCO MF
+  ticker: PQTIX US Equity
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
