@@ -2,11 +2,11 @@ Params:
   Period: "::"
   Rebalance: years
   ShowComponents: TRUE
-DUNN y Bmk:
+DUNN 20 y Bmk 20:
   world-monetary-and-agriculture-program-wma--performance.csv: 0.2
   Benchmark EAFE Indexes: 0.2
   Uninvested: 0.6
-AQR y Bmk:
+AQR 20 y Bmk 20:
   TSMOM: 0.2
   Benchmark EAFE Indexes: 0.2
   Uninvested: 0.6
