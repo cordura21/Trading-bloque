@@ -5,6 +5,27 @@ library(dplyr)
 library(tidyr)
 library(lubridate)
 
+
+# Lynx Program Import -----------------------------------------------------
+
+lynx_data <- read_excel('data importers/lynx import/data from lynx website.xlsx',sheet = 'Sheet1')[,1:13]
+
+
+lynx_data <- lynx_data %>%
+  pivot_longer(!year) %>% na.omit() %>%
+  mutate(date = Sys.Date())
+year(lynx_data$date) <- lynx_data$year  
+month(lynx_data$date) <- as.numeric(lynx_data$name )
+day(lynx_data$date) <- 1
+
+lynx_data <- lynx_data %>%
+  mutate(name = 'The Lynx Program'
+         , source = "lynxhedge.se") %>%
+  select(date,name,value, source)
+
+write.csv(lynx_data,file = 'data importers/bloomberg csv/The_Lynx_fund.csv',row.names = FALSE)
+
+
 # AQR Imports -------------------------------------------------------------
 rets$AQR_factors <- read_excel('data importers/aqr factors/Century of Factor Premia Monthly.xlsx', sheet = 'Century of Factor Premia', skip = 18) 
 names(rets$AQR_factors)[1] <- 'date'
@@ -70,7 +91,7 @@ output_data_stats_sources <- output_data %>% arrange(source,name,date) %>%
             , observations = n(), min = min(value), max = max(value)
             , nas = sum(is.na (value)))
 
-report_path <- file.path('data importers/',paste0(case_to_run,'importer_report.html'))
+report_path <- file.path('data importers/',paste0('importer_report.html'))
 
 rmarkdown::render('importer report.Rmd', output_file = report_path)
 
