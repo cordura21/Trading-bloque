@@ -28,6 +28,18 @@ La característica principal para elegir un fondo es que tenga un track record l
 
 # Selección
 
+## Backtest de AQR de 100 años
+
+![](images/aqr%20trend%20following%20century%20backtest.png)
+
+En esl backtest, agregar una estrategia de Trend Following (Time-Series Momentum) a un portafolio 60/40 mehora el retorno ajustado a riesgo de x0.39 a x0.55.
+
+Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 1880 a 2016 (es decir una estrategia de baja volatilidad). La alocación es 20% a trend following.
+
+## Trend Following ayuda en las crisis
+
+![](images/trend%20following%20ayuda%20en%20las%20crisis.png)
+
 ## Características de un buen trend follower
 
 -   Tiene un programa activo, con un mínimo de inversión bajo.
@@ -82,6 +94,28 @@ Sobre un total de \$140 billones de dólares
 
 \[mostrar el efecto de un management fee alto\]
 
+## Winton cambió el fondo
+
+```{r}
+library(xts)
+winton <- readRDS('../data results/Winton Multi Strategy.RDS')
+plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
+```
+
+## Riesgo de negocio en managers 'Vieja Escuela'
+
+```{r}
+mulvaney = read.csv('../data importers/iasg/the-mulvaney-global-markets-fund-performance.csv')
+library(lubridate)
+mulvaney$date <- Sys.Date()
+year(mulvaney$date) <- mulvaney$Year
+month(mulvaney$date) <- mulvaney$Month
+mulvaney <- xts(mulvaney$Assets / 1000000,mulvaney$date)
+plot.xts(mulvaney, main = 'Asset Under management ( mm de U$S)')
+```
+
+Los fondos más volátiles pierden muchos activos en momentos de caída.
+
 ## Riesgo de negocio: efecto en el retorno (\$100)
 
 -   ESCENARIO A: Mismo manager
@@ -101,32 +135,3 @@ Sobre un total de \$140 billones de dólares
 Supone un success fee del 20%.
 
 Al cambiar de manager se pierde el 'high watermark'.
-
-## Winton cambió el fondo
-
-```{r}
-library(xts)
-winton <- readRDS('../data results/Winton Multi Strategy.RDS')
-plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
-```
-
-Riesgo de negocio en managers 'Vieja Escuela'
-
-```{r}
-mulvaney = read.csv('../data importers/iasg/the-mulvaney-global-markets-fund-performance.csv')
-library(lubridate)
-mulvaney$date <- Sys.Date()
-year(mulvaney$date) <- mulvaney$Year
-month(mulvaney$date) <- mulvaney$Month
-mulvaney <- xts(mulvaney$Assets / 1000000,mulvaney$date)
-plot.xts(mulvaney, main = 'Asset Under management ( mm de U$S)')
-```
-
-Los fondos más volátiles pierden muchos activos en momentos de caída.
-
-```{r}Table sample}
-```
-
-```{r}
-knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
-```
