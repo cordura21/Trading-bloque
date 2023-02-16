@@ -153,7 +153,15 @@ Al cambiar de manager se pierde el 'high watermark'.
 library(readxl)
 library(reactable)
 library(dplyr)
-read_excel('../presentations/Tabla Fondos.xlsx') %>% reactable()
+temp_table <- read_excel('../presentations/Tabla Fondos.xlsx')
+
+  reactable(temp_table,
+            columns = list(
+              AUM = colDef(format = colFormat(prefix = "$", separators = TRUE, digits = 0)),
+              M_Fee = colDef(format = colFormat(percent = TRUE, digits = 1)),
+              P_Fee = colDef(format = colFormat(percent = TRUE, digits = 0))      
+            ))
+
 ```
 
 # Fondos individuales
