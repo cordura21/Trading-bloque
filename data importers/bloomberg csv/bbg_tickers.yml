@@ -126,3 +126,11 @@ PIMCO MF:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+Man AHL Diversified:
+  csv.name: Man AHL Diversified
+  ticker: MAHLDGD GU Equity
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
