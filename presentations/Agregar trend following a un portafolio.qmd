@@ -1,7 +1,9 @@
 ---
 title: "Agregar Trend Following a un portafolio"
-format: revealjs
-css: ../styles.css
+format:
+  revealjs:
+    mainfont: Bookerly
+    fontsize: 1.5em
 ---
 
 ```{r}
