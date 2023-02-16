@@ -116,7 +116,7 @@ mulvaney$date <- Sys.Date()
 year(mulvaney$date) <- mulvaney$Year
 month(mulvaney$date) <- mulvaney$Month
 mulvaney <- xts(mulvaney$Assets / 1000000,mulvaney$date)
-plot.xts(mulvaney, main = 'Asset Under management ( mm de U$S)')
+plot.xts(mulvaney, main = 'Asset Under management ( mm de U$S)', type = 'h')
 ```
 
 Los fondos más volátiles pierden muchos activos en momentos de caída.
@@ -126,8 +126,6 @@ Los fondos más volátiles pierden muchos activos en momentos de caída.
 -   ESCENARIO A: Mismo manager
 
     -   Resultado de -\$20 + Resultado de +\$20 = \$100
-
-<!-- -->
 
 -   ESCENARIO B: Cambio de manager
 
@@ -140,6 +138,10 @@ Los fondos más volátiles pierden muchos activos en momentos de caída.
 Supone un success fee del 20%.
 
 Al cambiar de manager se pierde el 'high watermark'.
+
+## Riesgo de negocio y High Watermark
+
+![](images/high%20watermark.png)Asumiendo un performance fee de 20%
 
 ## Efectos del benchmark
 

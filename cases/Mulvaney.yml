@@ -2,6 +2,5 @@ Params:
   Period: "::"
   Rebalance: years
   ShowComponents: TRUE
-Mulvaney:
+Portfolio TF:
   the-mulvaney-global-markets-fund-performance.csv: 1
-
