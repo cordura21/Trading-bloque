@@ -1,0 +1,109 @@
+---
+title: "Agregar Trend Following a un portafolio"
+format: revealjs
+---
+
+# Conclusiones
+
+## Conclusiones
+
+-   Trend Following mejora el retorno y el riesgo de un portafolio 'buy and hold'.
+-   La selección de un manager depende del objetivo: a) tener Trend Following o b) cubrir riesgos de accidente.
+-   Hay dos tipos de managers: 'vieja escuela' e 'institucionales'.
+-   De acuerdo al tipo de manager es el porcentaje del portafolio a invertir.
+
+## Fondos seleccionados
+
+La característica principal para elegir un fondo es que tenga un track record largo haciendo lo mismo.
+
+-   Fondos de la 'vieja escuela'.
+
+    -   Mulvaney, Dunn, Chesapeake.
+
+-   Fondos 'institucionales'.
+
+    -   Lynx, Transtrend.
+
+# Mejoras a un portafolio
+
+# Selección
+
+## Características de un buen trend follower
+
+-   Tiene un programa activo, con un mínimo de inversión bajo.
+
+-   Tiene al menos 15 años de historia.
+
+-   Trend Following es la estrategia dominante de su programa.
+
+-   Es totalmente sistemático y usa reglas cuantitativas para entrar y salir de posiciones.
+
+-   Está globalmente diversificado e invierte en una amplia selección de clases de activos.
+
+## Buenos Trend Followers
+
+![](images/top%20funds%20by%20mar%2015%20years.png)
+
+Estos fondos tenían 15 años de track record en el año 2000. Para cada año muestra el ranking de los 5 mejores fondos por ratio MAR.
+
+## Fondos vieja escuela
+
+Vieja escuela:
+
+-   Ejecutan la estrategia en forma pura.
+
+-   Tienen grandes movimientos.
+
+-   Se diferencian en el corto plazo.
+
+-   Pueden tener riesgo key-person.
+
+## Fondos institucionales
+
+-   Son más predecibles
+
+-   Se mueven menos
+
+-   A veces se 'quedan atrás'
+
+-   La continuidad de negocio es más segura
+
+## Managers grandes: negocio
+
+Sobre un total de \$140 billones de dólares
+
+![](images/managers%20grandes.png)
+
+## Managers grandes: sus fondos
+
+![](images/big%20managers.png)
+
+## Equilibrio entre management fee y performance fee
+
+\[mostrar el efecto de un management fee alto\]
+
+## Riesgo de negocio: efecto en el retorno (\$100)
+
+-   ESCENARIO A: Mismo manager
+
+    -   Resultado de -\$20 + Resultado de +\$20 = \$100
+
+<!-- -->
+
+-   ESCENARIO B: Cambio de manager
+
+    -   Resultado de -\$20 -\>
+
+    -   Cambio de manager
+
+    -   Resultado de +20 - success fee de \$4 nuevo manager = \$96
+
+Supone un success fee del 20%.
+
+Al cambiar de manager se pierde el 'high watermark'.
+
+## Table sample
+
+```{r}
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
+```
