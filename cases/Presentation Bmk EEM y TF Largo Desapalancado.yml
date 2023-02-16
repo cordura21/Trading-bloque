@@ -1,0 +1,18 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Full Bmk:
+  Benchmark EEM Indexes: 1
+Full TF:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.25
+  diversified-lv--performance.csv: 0.25
+  classic-performance.csv: 0.25
+  evolution-strategies-performance.csv: 0.25
+Bmk 20, TF 20 y Cash 60:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.05
+  diversified-lv--performance.csv: 0.05
+  classic-performance.csv: 0.5
+  evolution-strategies-performance.csv: 0.05
+  Benchmark EEM Indexes: 0.2
+  Uninvested: 0.6
