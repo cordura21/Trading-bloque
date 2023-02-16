@@ -1,0 +1,44 @@
+---
+title: "Agregar Trend Following a un portafolio"
+format: revealjs
+editor: visual
+---
+
+## Conclusiones
+
+-   Trend Following mejora el retorno y el riesgo de un portafolio 'buy and hold'.
+-   La selección de un manager depende del objetivo: a) tener Trend Following o b) cubrir riesgos de accidente.
+-   Hay dos tipos de managers: 'vieja escuela' e 'institucionales'.
+-   De acuerdo al tipo de manager es el porcentaje del portafolio a invertir.
+
+## Fondos seleccionados
+
+La característica principal para elegir un fondo es que tenga un track record largo haciendo lo mismo.
+
+-   Fondos de la 'vieja escuela'.
+
+    -   Mulvaney, Dunn, Chesapeake.
+
+-   Fondos 'institucionales'.
+
+    -   Lynx, Transtrend.
+
+# Características de un buen trend follower
+
+-   Tiene un programa activo, con un mínimo de inversión bajo.
+
+-   Tiene al menos 15 años de historia.
+
+-   Trend Following es la estrategia dominante de su programa.
+
+-   Es totalmente sistemático y usa reglas cuantitativas para entrar y salir de posiciones.
+
+-   Está globalmente diversificado e invierte en una amplia selección de clases de activos.
+
+# Buenos Trend Followers
+
+![](images/top%20funds%20by%20mar%2015%20years.png)
+
+```{r}
+1 + 1
+```
