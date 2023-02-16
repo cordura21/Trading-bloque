@@ -1,0 +1,20 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Full TF Institutional:
+  The Lynx Program: 0.5
+  dtp-enhanced-risk-usd--performance.csv: 0.5
+TF Institutional 20 & Bmk 80:
+  The Lynx Program: 0.1
+  dtp-enhanced-risk-usd--performance.csv: 0.1
+  Benchmark EEM Indexes: 0.8
+TF Institutional 20 & Univested 80:
+  The Lynx Program: 0.1
+  dtp-enhanced-risk-usd--performance.csv: 0.1
+  Uninvested: 0.8
+TF Institutional 20, Bmk 20 & Uninvested 60:
+  The Lynx Program: 0.1
+  dtp-enhanced-risk-usd--performance.csv: 0.1
+  Benchmark EEM Indexes: 0.2
+  Uninvested: 0.6
