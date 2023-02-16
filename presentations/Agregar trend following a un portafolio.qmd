@@ -102,7 +102,30 @@ Supone un success fee del 20%.
 
 Al cambiar de manager se pierde el 'high watermark'.
 
-## Table sample
+## Winton cambió el fondo
+
+```{r}
+library(xts)
+winton <- readRDS('../data results/Winton Multi Strategy.RDS')
+plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
+```
+
+Riesgo de negocio en managers 'Vieja Escuela'
+
+```{r}
+mulvaney = read.csv('../data importers/iasg/the-mulvaney-global-markets-fund-performance.csv')
+library(lubridate)
+mulvaney$date <- Sys.Date()
+year(mulvaney$date) <- mulvaney$Year
+month(mulvaney$date) <- mulvaney$Month
+mulvaney <- xts(mulvaney$Assets / 1000000,mulvaney$date)
+plot.xts(mulvaney, main = 'Asset Under management ( mm de U$S)')
+```
+
+Los fondos más volátiles pierden muchos activos en momentos de caída.
+
+```{r}Table sample}
+```
 
 ```{r}
 knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
