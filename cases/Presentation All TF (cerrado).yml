@@ -1,0 +1,11 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Portfolio TF:
+  world-monetary-and-agriculture-program-wma--performance.csv: .1666667
+  diversified-lv--performance.csv: .1666667
+  the-mulvaney-global-markets-fund-performance.csv: .1666667
+  crabel-advanced-trend-1x-performance.csv: .1666667
+  The Lynx Program: .1666667
+  dtp-enhanced-risk-usd--performance.csv: .1666667
