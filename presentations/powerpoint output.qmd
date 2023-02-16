@@ -1,7 +1,7 @@
 ---
-title: "Agregar Trend Following a un portafolio"
-format: revealjs
-css: ../styles.css
+title: "ppt formatted presentation"
+format: pptx
+editor: visual
 ---
 
 ```{r}
@@ -116,60 +116,3 @@ month(mulvaney$date) <- mulvaney$Month
 mulvaney <- xts(mulvaney$Assets / 1000000,mulvaney$date)
 plot.xts(mulvaney, main = 'Asset Under management ( mm de U$S)')
 ```
-
-Los fondos más volátiles pierden muchos activos en momentos de caída.
-
-## Riesgo de negocio: efecto en el retorno (\$100)
-
--   ESCENARIO A: Mismo manager
-
-    -   Resultado de -\$20 + Resultado de +\$20 = \$100
-
-<!-- -->
-
--   ESCENARIO B: Cambio de manager
-
-    -   Resultado de -\$20 -\>
-
-    -   Cambio de manager
-
-    -   Resultado de +20 - success fee de \$4 nuevo manager = \$96
-
-Supone un success fee del 20%.
-
-Al cambiar de manager se pierde el 'high watermark'.
-
-## Efectos del benchmark
-
-## Efectos de trend following
-
-# Fondos recomendados. Fees y otros datos.
-
-```{r}
-library(readxl)
-library(reactable)
-library(dplyr)
-read_excel('../presentations/Tabla Fondos.xlsx') %>% reactable()
-```
-
-# Fondos individuales
-
-## Crabel
-
-![](images/Crabel%20Advanced%20Trend.png)
-
-Es un fondo nuevo, pero vemos lo que hace. Nosotros fuimos los primeros inversores.
-
-## Crabel mantiene su perfil de volatilidad
-
-![](images/Crabel%20Advanced%20Trend%20Volatility.png)
-
-## Winton cambió el fondo
-
-```{r}
-library(xts)
-winton <- readRDS('../data results/Winton Multi Strategy.RDS')
-plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
-```
-
-## 
