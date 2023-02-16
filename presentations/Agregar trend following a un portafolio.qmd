@@ -138,6 +138,12 @@ Al cambiar de manager se pierde el 'high watermark'.
 
 # Efectos sobre un portafolio
 
+![](images/agregando%20trend%20following%20a%20benchmark.png)
+
+## Contribución al portafolio
+
+![](images/contribucio%CC%81n%20al%20benchmark.png)
+
 ## Efectos del benchmark
 
 ## Efectos de trend following
