@@ -3,6 +3,10 @@ title: "Agregar Trend Following a un portafolio"
 format: revealjs
 ---
 
+```{r}
+library(xts)
+```
+
 # Conclusiones
 
 ## Conclusiones
@@ -22,11 +26,9 @@ La característica principal para elegir un fondo es que tenga un track record l
 
 -   Fondos 'institucionales'.
 
-    -   Lynx, Transtrend.
+    -   Lynx, Transtrend, Crabel.
 
 # Mejoras a un portafolio
-
-# Selección
 
 ## Backtest de AQR de 100 años
 
@@ -39,6 +41,14 @@ Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 188
 ## Trend Following ayuda en las crisis
 
 ![](images/trend%20following%20ayuda%20en%20las%20crisis.png)
+
+# Efectos sobre un portafolio
+
+![](images/agregando%20trend%20following%20a%20benchmark.png)
+
+## Contribución al portafolio
+
+![](images/contribucio%CC%81n%20al%20benchmark.png)
 
 ## Características de un buen trend follower
 
@@ -94,14 +104,6 @@ Sobre un total de \$140 billones de dólares
 
 \[mostrar el efecto de un management fee alto\]
 
-## Winton cambió el fondo
-
-```{r}
-library(xts)
-winton <- readRDS('../data results/Winton Multi Strategy.RDS')
-plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
-```
-
 ## Riesgo de negocio en managers 'Vieja Escuela'
 
 ```{r}
@@ -136,14 +138,28 @@ Supone un success fee del 20%.
 
 Al cambiar de manager se pierde el 'high watermark'.
 
-# Efectos sobre un portafolio
-
-![](images/agregando%20trend%20following%20a%20benchmark.png)
-
-## Contribución al portafolio
-
-![](images/contribucio%CC%81n%20al%20benchmark.png)
-
 ## Efectos del benchmark
 
 ## Efectos de trend following
+
+# Fondos individuales
+
+## Crabel
+
+![](images/Crabel%20Advanced%20Trend.png)
+
+Es un fondo nuevo, pero vemos lo que hace. Nosotros fuimos los primeros inversores.
+
+## Crabel mantiene su perfil de volatilidad
+
+![](images/Crabel%20Advanced%20Trend%20Volatility.png)
+
+## Winton cambió el fondo
+
+```{r}
+library(xts)
+winton <- readRDS('../data results/Winton Multi Strategy.RDS')
+plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
+```
+
+## 
