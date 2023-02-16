@@ -135,3 +135,9 @@ Los fondos más volátiles pierden muchos activos en momentos de caída.
 Supone un success fee del 20%.
 
 Al cambiar de manager se pierde el 'high watermark'.
+
+# Efectos sobre un portafolio
+
+## Efectos del benchmark
+
+## Efectos de trend following
