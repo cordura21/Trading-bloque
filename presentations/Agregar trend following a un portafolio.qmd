@@ -1,8 +1,9 @@
 ---
 title: "Agregar Trend Following a un portafolio"
 format: revealjs
-editor: visual
 ---
+
+# Conclusiones
 
 ## Conclusiones
 
@@ -23,7 +24,11 @@ La característica principal para elegir un fondo es que tenga un track record l
 
     -   Lynx, Transtrend.
 
-# Características de un buen trend follower
+# Mejoras a un portafolio
+
+# Selección
+
+## Características de un buen trend follower
 
 -   Tiene un programa activo, con un mínimo de inversión bajo.
 
@@ -35,11 +40,13 @@ La característica principal para elegir un fondo es que tenga un track record l
 
 -   Está globalmente diversificado e invierte en una amplia selección de clases de activos.
 
-# Buenos Trend Followers
+## Buenos Trend Followers
 
 ![](images/top%20funds%20by%20mar%2015%20years.png)
 
-# Tipos de Fondo: vieja escuela
+Estos fondos tenían 15 años de track record en el año 2000. Para cada año muestra el ranking de los 5 mejores fondos por ratio MAR.
+
+## Fondos vieja escuela
 
 Vieja escuela:
 
@@ -51,7 +58,7 @@ Vieja escuela:
 
 -   Pueden tener riesgo key-person.
 
-# Tipos de Fondo: institucionales
+## Fondos institucionales
 
 -   Son más predecibles
 
@@ -61,10 +68,43 @@ Vieja escuela:
 
 -   La continuidad de negocio es más segura
 
--   Tienen volatilidades más bajas.
-
-# Managers grandes
+## Managers grandes: negocio
 
 Sobre un total de \$140 billones de dólares
 
 ![](images/managers%20grandes.png)
+
+## Managers grandes: sus fondos
+
+![](images/big%20managers.png)
+
+## Equilibrio entre management fee y performance fee
+
+\[mostrar el efecto de un management fee alto\]
+
+## Riesgo de negocio: efecto en el retorno (\$100)
+
+-   ESCENARIO A: Mismo manager
+
+    -   Resultado de -\$20 + Resultado de +\$20 = \$100
+
+```{=html}
+<!-- -->
+```
+-   ESCENARIO B: Cambio de manager
+
+    -   Resultado de -\$20 -\>
+
+    -   Cambio de manager
+
+    -   Resultado de +20 - success fee de \$4 nuevo manager = \$96
+
+Supone un success fee del 20%.
+
+Al cambiar de manager se pierde el 'high watermark'.
+
+## Table sample
+
+```{r}
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
+```
