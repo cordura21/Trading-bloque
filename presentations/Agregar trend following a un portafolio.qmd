@@ -88,9 +88,8 @@ Sobre un total de \$140 billones de dólares
 
     -   Resultado de -\$20 + Resultado de +\$20 = \$100
 
-```{=html}
 <!-- -->
-```
+
 -   ESCENARIO B: Cambio de manager
 
     -   Resultado de -\$20 -\>

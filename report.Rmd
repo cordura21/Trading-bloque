@@ -139,7 +139,12 @@ chart.RiskReturnScatter(portfolio_data_xts(portfolios))
 # Contribution analysis
 
 ```{r}
-contribution_table
+contribution_table %>%
+  reactable(groupBy = 'portfolio'
+            , columns = list(value = colDef(name = ' Contribution'
+                                            ,aggregate = 'sum'
+                                            ,format = colFormat(digits = 1,
+                                            locales = "en-US"))))
 
 ggplot(contribution_table_yearly,aes(x= date,y= value,  fill = name)) + geom_bar(stat = 'identity') + facet_wrap(~portfolio) + theme_bw() + theme(legend.position = 'bottom')
 

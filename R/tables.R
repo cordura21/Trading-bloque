@@ -27,12 +27,7 @@ for(i in 1:length(portfolios)){
 
 contribution_table <- bind_rows(contribution_table) %>%
   arrange(portfolio) %>% group_by(portfolio) %>%
-  arrange(desc(value)) %>%
-  reactable(groupBy = 'portfolio'
-            , columns = list(value = colDef(name = ' Contribution'
-                                            ,aggregate = 'sum'
-                                            ,format = colFormat(digits = 1,
-                                            locales = "en-US"))))
+  arrange(desc(value)) 
 
 
 contribution_table_yearly <- list()
