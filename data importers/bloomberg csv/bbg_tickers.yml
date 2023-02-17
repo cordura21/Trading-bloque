@@ -134,3 +134,11 @@ Man AHL Diversified:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+Cash 3M:
+  csv.name: Cash 3M
+  ticker: LD12TRUU Index
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
