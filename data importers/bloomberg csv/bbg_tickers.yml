@@ -142,3 +142,11 @@ Cash 3M:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+Cash 1y-5y:
+  csv.name: Cash 1-5y
+  ticker: VFISX US EQUITY
+  field: PX_LAST
+  start.date: 19700101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
