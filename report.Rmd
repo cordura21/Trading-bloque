@@ -57,6 +57,21 @@ reactable::reactable(tables$summary_stats
 
 ```
 
+```{r}
+library(downloadthis)
+
+tables$summary_stats %>%
+  download_this(
+    output_name = case_to_run,
+    
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "info",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
 
 # Base 100 (money)
 ```{r}
