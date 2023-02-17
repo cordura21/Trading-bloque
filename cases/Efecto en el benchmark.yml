@@ -1,0 +1,29 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Benchmark de 5 activos:
+  Benchmark EEM Indexes: 1
+Portafolio de Trend Followers:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.25
+  diversified-lv--performance.csv: 0.25
+  classic-performance.csv: 0.25
+  evolution-strategies-performance.csv: 0.25
+Benchmark 20:
+  Benchmark EEM Indexes: 0.2
+  Uninvested: 0.8
+Trend Following 20:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.05
+  diversified-lv--performance.csv: 0.05
+  classic-performance.csv: 0.05
+  evolution-strategies-performance.csv: 0.05
+  Uninvested: 0.8
+Benchmark 20 cash 80:
+  Benchmark EEM Indexes: 0.2
+  Cash: 0.8
+Trend Following 20 cash 80:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.05
+  diversified-lv--performance.csv: 0.05
+  classic-performance.csv: 0.05
+  evolution-strategies-performance.csv: 0.05
+  Cash: 0.8

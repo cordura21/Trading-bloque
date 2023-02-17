@@ -1,0 +1,6 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+AQMIX:
+  AQR CTA Fund (AQMIX): 1

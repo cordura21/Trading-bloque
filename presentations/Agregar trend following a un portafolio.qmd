@@ -45,6 +45,8 @@ Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 188
 
 # Efectos sobre un portafolio
 
+# ![](images/alocacio%CC%81n%20cartera%20agresiva.png)Efectos sobre un portafolio
+
 ![](images/agregando%20trend%20following%20a%20benchmark.png)
 
 # Efectos sobre un portafolio
@@ -186,11 +188,20 @@ winton <- readRDS('../data results/Winton Multi Strategy.RDS')
 plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
 ```
 
+# Bill Dunn: el track record más largo
+
+![](https://imgs.search.brave.com/M5BALVPxbJ5Y2RFO07BXa_5Zd5On-p_7HeVpN0JXwt0/rs:fit:660:494:1/g:ce/aHR0cHM6Ly93d3cu/dHJlbmRmb2xsb3dp/bmcuY29tL2ltYWdl/cy9jb21wMjAxNy5q/cGc)
+
+# Bill Dunn: Riesgo idiosincrático
+
+![](images/idiosincracia%20de%20Bill%20Dunn.png)
+
+# Bill Dunn: el negocio
+
+![](images/Bill%20Dunn%20AUM.png)
+
 # Fondos chicos
 
 ![](images/tabla%20fondos%20chicos.png)
 
 # Mutual Funds y ETF
-
-
-  
