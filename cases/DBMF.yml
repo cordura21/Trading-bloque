@@ -8,3 +8,7 @@ DBMF:
   DBMF: 1
 AQR:
   AQR CTA Fund (AQMIX): 1
+Mix:
+  DBMF: 0.3333
+  AQR CTA Fund (AQMIX): 0.3333
+  the-mulvaney-global-markets-fund-performance.csv: 0.3333

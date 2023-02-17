@@ -1,0 +1,8 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Chesapeake Original Fund:
+  diversified-lv--performance.csv: 1         
+Transtrend:
+  dtp-enhanced-risk-usd--performance.csv: 1

@@ -170,7 +170,7 @@ if(length(portfolios) == 1){
   temp_table <- tbl_xts(temp_table)
   
   dygraph(temp_table) %>%
-    dyStackedBarChart() 
+    dyBarChart() 
 }
 
 ```

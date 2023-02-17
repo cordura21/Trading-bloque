@@ -1,0 +1,7 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Lynx / Transtrend Portfolio:
+  The Lynx Program: .5
+  dtp-enhanced-risk-usd--performance.csv: .5

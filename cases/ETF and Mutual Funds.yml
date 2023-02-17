@@ -1,0 +1,9 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Mix:
+  DBMF: 0.25
+  AQR CTA Fund (AQMIX): 0.25
+  the-mulvaney-global-markets-fund-performance.csv: 0.25
+  JerryParkerFund: .25

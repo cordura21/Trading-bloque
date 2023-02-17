@@ -12,14 +12,12 @@ library(xts)
 
 # Conclusiones
 
-## Conclusiones
-
 -   Trend Following mejora el retorno y el riesgo de un portafolio 'buy and hold'.
 -   La selección de un manager depende del objetivo: a) tener Trend Following o b) cubrir riesgos de accidente.
 -   Hay dos tipos de managers: 'vieja escuela' e 'institucionales'.
 -   De acuerdo al tipo de manager es el porcentaje del portafolio a invertir.
 
-## Fondos seleccionados
+# Fondos seleccionados
 
 La característica principal para elegir un fondo es que tenga un track record largo haciendo lo mismo.
 
@@ -33,7 +31,7 @@ La característica principal para elegir un fondo es que tenga un track record l
 
 # Mejoras a un portafolio
 
-## Backtest de AQR de 100 años
+# Backtest de AQR de 100 años
 
 ![](images/aqr%20trend%20following%20century%20backtest.png)
 
@@ -41,7 +39,7 @@ En esl backtest, agregar una estrategia de Trend Following (Time-Series Momentum
 
 Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 1880 a 2016 (es decir una estrategia de baja volatilidad). La alocación es 20% a trend following.
 
-## Trend Following ayuda en las crisis
+# Trend Following ayuda en las crisis
 
 ![](images/trend%20following%20ayuda%20en%20las%20crisis.png)
 
@@ -49,11 +47,15 @@ Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 188
 
 ![](images/agregando%20trend%20following%20a%20benchmark.png)
 
-## Contribución al portafolio
+# Efectos sobre un portafolio
+
+![](images/efecto%20de%20mezclar%20el%20benchmark%20con%20trend%20following.png)
+
+# Contribución al portafolio
 
 ![](images/contribucio%CC%81n%20al%20benchmark.png)
 
-## Características de un buen trend follower
+# Características de un buen trend follower
 
 -   Tiene un programa activo, con un mínimo de inversión bajo.
 
@@ -65,13 +67,13 @@ Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 188
 
 -   Está globalmente diversificado e invierte en una amplia selección de clases de activos.
 
-## Buenos Trend Followers
+# Buenos Trend Followers
 
 ![](images/top%20funds%20by%20mar%2015%20years.png)
 
 Estos fondos tenían 15 años de track record en el año 2000. Para cada año muestra el ranking de los 5 mejores fondos por ratio MAR.
 
-## Fondos vieja escuela
+# Fondos vieja escuela
 
 Vieja escuela:
 
@@ -83,7 +85,7 @@ Vieja escuela:
 
 -   Pueden tener riesgo key-person.
 
-## Fondos institucionales
+# Fondos institucionales
 
 -   Son más predecibles
 
@@ -93,21 +95,21 @@ Vieja escuela:
 
 -   La continuidad de negocio es más segura
 
-## Managers grandes: negocio
+# Managers grandes: negocio
 
 Sobre un total de \$140 billones de dólares
 
 ![](images/managers%20grandes.png)
 
-## Managers grandes: sus fondos
+# Managers grandes: sus fondos
 
 ![](images/big%20managers.png)
 
-## Equilibrio entre management fee y performance fee
+# Equilibrio entre management fee y performance fee
 
 \[mostrar el efecto de un management fee alto\]
 
-## Riesgo de negocio en managers 'Vieja Escuela'
+# Riesgo de negocio en managers 'Vieja Escuela'
 
 ```{r}
 mulvaney = read.csv('../data importers/iasg/the-mulvaney-global-markets-fund-performance.csv')
@@ -116,12 +118,12 @@ mulvaney$date <- Sys.Date()
 year(mulvaney$date) <- mulvaney$Year
 month(mulvaney$date) <- mulvaney$Month
 mulvaney <- xts(mulvaney$Assets / 1000000,mulvaney$date)
-plot.xts(mulvaney, main = 'Asset Under management ( mm de U$S)', type = 'h')
+plot.xts(mulvaney, main = 'MULVANEY: Asset Under management ( mm de U$S)', type = 'h')
 ```
 
 Los fondos más volátiles pierden muchos activos en momentos de caída.
 
-## Riesgo de negocio: efecto en el retorno (\$100)
+# Riesgo de negocio: efecto en el retorno (\$100)
 
 -   ESCENARIO A: Mismo manager
 
@@ -139,13 +141,13 @@ Supone un success fee del 20%.
 
 Al cambiar de manager se pierde el 'high watermark'.
 
-## Riesgo de negocio y High Watermark
+# Riesgo de negocio y High Watermark
 
 ![](images/high%20watermark.png)Asumiendo un performance fee de 20%
 
-## Efectos del benchmark
+# Idiosincracia y 'path dependence'
 
-## Efectos de trend following
+![](images/idiosincracia%20de%20los%20managers.png)
 
 # Fondos recomendados. Fees y otros datos.
 
@@ -166,17 +168,17 @@ temp_table <- read_excel('../presentations/Tabla Fondos.xlsx')
 
 # Fondos individuales
 
-## Crabel
+# Crabel
 
 ![](images/Crabel%20Advanced%20Trend.png)
 
 Es un fondo nuevo, pero vemos lo que hace. Nosotros fuimos los primeros inversores.
 
-## Crabel mantiene su perfil de volatilidad
+# Crabel mantiene su perfil de volatilidad
 
 ![](images/Crabel%20Advanced%20Trend%20Volatility.png)
 
-## Winton cambió el fondo
+# Winton cambió el fondo
 
 ```{r}
 library(xts)
@@ -184,4 +186,11 @@ winton <- readRDS('../data results/Winton Multi Strategy.RDS')
 plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
 ```
 
-## 
+# Fondos chicos
+
+![](images/tabla%20fondos%20chicos.png)
+
+# Mutual Funds y ETF
+
+
+  
