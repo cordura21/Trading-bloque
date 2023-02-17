@@ -1,0 +1,7 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Mix:
+  AQR CTA Fund (AQMIX): 0.5
+  DBMF: 0.5

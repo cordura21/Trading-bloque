@@ -5,8 +5,15 @@ library(dplyr)
 library(tidyr)
 library(lubridate)
 library(stringr)
+library(xts)
+library(TTR)
+library(tbl2xts)
 
-# Winton Multi Strategy Import
+
+
+
+# Winton Multi Strategy Import --------------------------------------------
+
 winton <- read.csv('data importers/Winton import/tabula-winton returns.csv')
 names(winton)[2:13] <- 1:12
 winton <- winton[1:13]
