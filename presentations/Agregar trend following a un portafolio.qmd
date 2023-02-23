@@ -194,11 +194,9 @@ plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
 
 # ![](images/winton%20innovations.png)Bill Dunn: el track record más largo
 
-![](https://imgs.search.brave.com/M5BALVPxbJ5Y2RFO07BXa_5Zd5On-p_7HeVpN0JXwt0/rs:fit:660:494:1/g:ce/aHR0cHM6Ly93d3cu/dHJlbmRmb2xsb3dp/bmcuY29tL2ltYWdl/cy9jb21wMjAxNy5q/cGc)
+![](images/DUNN-Information-February-2021.webp)
 
 # Bill Dunn: Riesgo idiosincrático
-
-![](images/idiosincracia%20de%20Bill%20Dunn.png)
 
 # Bill Dunn: el negocio
 

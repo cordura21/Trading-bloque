@@ -1,0 +1,8 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Mulvaney and Transtrend at 20:
+  the-mulvaney-global-markets-fund-performance.csv: .10
+  dtp-enhanced-risk-usd--performance.csv: .10
+  Benchmark EEM Indexes: .80

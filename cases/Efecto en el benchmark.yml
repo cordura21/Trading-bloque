@@ -5,7 +5,7 @@ Params:
 T-Bill 3 meses:
   Cash 3M: 1 
 T-Bill 1-5 años:
-  Cash 1-5y: 1
+  Cash 1-5y: 1 
 Benchmark 20:
   Benchmark EEM Indexes: 0.2
   Uninvested: 0.8
