@@ -6,9 +6,25 @@ output:
   html_document:
     css: "style.css"
 ---
+
 ```{r global-options, include=FALSE}
 knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/',
                       echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r}
+library(readxl)
+library(magrittr)
+library(kableExtra)
+library(formattable)
+
+table <- read_excel('tables.xlsx',sheet = 'AQR')
+table$`Retorno sobre cash` <- percent(table$`Retorno sobre cash`,digits = 1 )
+table$`Volatilidad Anualizada` <- percent(table$`Volatilidad Anualizada`,digits = 1 )
+table$`Máxima Caída` <- percent(table$`Máxima Caída`,digits = 1 )
+table$`Sharpe (neto de fees)` <- digits(table$`Sharpe (neto de fees)`,digits = 2 )
+knitr::kable(table,format.args = list(big.mark = ",")) %>% kable_classic()
+
 ```
 
 ```{r}
@@ -23,8 +39,7 @@ library(formattable)
 table$Growth <- digits(table$Growth, 1) %>% suffix('x')
 table$CAGR <- formattable::percent(table$CAGR,digits = 1 )
 table$Vol <- formattable::percent(table$Vol,digits = 1 )
-table$maxDD <- formattable::percent(table$maxDD,digits = 0 )
-table$Sharpe <- formattable::digits(table$Vol,digits = 2 )
+
 table$Calmar <- formattable::digits(table$Calmar,digits = 2 )
 knitr::kable(table,format.args = list(big.mark = ",")) %>% kable_classic()
 ```
@@ -36,6 +51,9 @@ reasons <-data.frame( manager = c('Old Shool', 'Institutionals')
 knitr::kable(reasons) %>% kable_minimal(html_font = 'Bookerly')
 ```
 
+table\$maxDD \<- formattable::percent(table\$maxDD,digits = 0 )
+
+table\$Sharpe \<- formattable::digits(table\$Vol,digits = 2 )
 
 # Conclusiones
 
@@ -57,10 +75,6 @@ La característica principal para elegir un fondo es que tenga un track record l
     -   Lynx, Transtrend, Crabel.
 
 # Mejoras a un portafolio
- 
-  
-  
-![](images/aqr%20trend%20following%20century%20backtest.png)
 
 En esl backtest, agregar una estrategia de Trend Following (Time-Series Momentum) a un portafolio 60/40 mehora el retorno ajustado a riesgo de x0.39 a x0.55.
 
@@ -70,9 +84,9 @@ Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 188
 
 ![](images/trend%20following%20ayuda%20en%20las%20crisis.png)
 
-# Efectos sobre un portafolio
+# Efectos sobre un portafolio  
 
-# ![](images/alocacio%CC%81n%20cartera%20agresiva.png)Efectos sobre un portafolio
+# ![](images/portfolio%20transition.png)Efectos sobre un portafolio
 
 ![](images/agregando%20trend%20following%20a%20benchmark.png)
 
@@ -138,7 +152,7 @@ Sobre un total de \$140 billones de dólares
 
 # Equilibrio entre management fee y performance fee
 
-\[mostrar el efecto de un management fee alto\]
+$$mostrar el efecto de un management fee alto$$
 
 # Riesgo de negocio en managers 'Vieja Escuela'
 
