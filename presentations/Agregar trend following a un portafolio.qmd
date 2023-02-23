@@ -1,9 +1,9 @@
 ---
 title: "Agregar Trend Following a un portafolio"
 format:
-  revealjs:
-    mainfont: Bookerly
+  html:
     fontsize: 1.5em
+    css: style.css
 ---
 
 ```{r}
@@ -50,6 +50,8 @@ Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 188
 ![](images/agregando%20trend%20following%20a%20benchmark.png)
 
 # Efectos sobre un portafolio
+
+# ![](images/efecto%20de%20tf%20en%20el%20benchmark.png)Efectos sobre un portafolio
 
 ![](images/efecto%20de%20mezclar%20el%20benchmark%20con%20trend%20following.png)
 
@@ -188,13 +190,13 @@ winton <- readRDS('../data results/Winton Multi Strategy.RDS')
 plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
 ```
 
-# Bill Dunn: el track record más largo
+# Winton cambió de fondo
 
-![](https://imgs.search.brave.com/M5BALVPxbJ5Y2RFO07BXa_5Zd5On-p_7HeVpN0JXwt0/rs:fit:660:494:1/g:ce/aHR0cHM6Ly93d3cu/dHJlbmRmb2xsb3dp/bmcuY29tL2ltYWdl/cy9jb21wMjAxNy5q/cGc)
+# ![](images/winton%20innovations.png)Bill Dunn: el track record más largo
+
+![](images/DUNN-Information-February-2021.webp)
 
 # Bill Dunn: Riesgo idiosincrático
-
-![](images/idiosincracia%20de%20Bill%20Dunn.png)
 
 # Bill Dunn: el negocio
 

@@ -1,0 +1,18 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Benchmarl 100:
+  Benchmark EEM Indexes: 1
+Mulvaney and Transtrend at 20:
+  the-mulvaney-global-markets-fund-performance.csv: .10
+  dtp-enhanced-risk-usd--performance.csv: .10
+  Benchmark EEM Indexes: .80
+Mulvaney and Transtrend at 30:
+  the-mulvaney-global-markets-fund-performance.csv: .15
+  dtp-enhanced-risk-usd--performance.csv: .15
+  Benchmark EEM Indexes: .40
+Mulvaney and Transtrend at 40:
+  the-mulvaney-global-markets-fund-performance.csv: .20
+  dtp-enhanced-risk-usd--performance.csv: .20
+  Benchmark EEM Indexes: .60

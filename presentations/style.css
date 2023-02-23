@@ -1,9 +1,23 @@
-/*-- scss:defaults --*/
-$h2-font-size:          1.6rem !default;
-$headings-font-weight:  500 !default;
-$body-color:            $gray-700 !default;
+/* Whole document: */
+body{
+  font-family: Roboto;
+  font-size: 18;
+}
+/* Headers */
+h1{
+  font-size: 18px ;
+   font-decoration: underline
+}
 
-/*-- scss:rules --*/
-h1, h2, h3, h4, h5, h6 {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+h2{
+  font-size: 16px ;
+  font-style:italic
+}
+
+blockquote {
+    background: #f9f9f9;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 12px;
+    border-left: 5px solid #eee;
 }

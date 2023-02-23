@@ -1,0 +1,18 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Dunn:
+  world-monetary-and-agriculture-program-wma--performance.csv: 1
+Cheaspeake:
+  diversified-lv--performance.csv: 1
+Mulvaney:
+  the-mulvaney-global-markets-fund-performance.csv: 1
+Lynx:
+  The Lynx Program: 1
+Transtrend:
+  dtp-enhanced-risk-usd--performance.csv: 1
+Winton Multi Strategy:
+  Winton Multi Strategy: 1
+
+

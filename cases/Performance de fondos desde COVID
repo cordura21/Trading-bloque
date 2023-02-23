@@ -1,0 +1,18 @@
+Params:
+  Period: "2019::"
+  Rebalance: years
+  ShowComponents: TRUE
+Benchmark de 5 activos:
+  Benchmark EEM Indexes: 1
+Dunn:
+  world-monetary-and-agriculture-program-wma--performance.csv: 1
+Cheaspeake:
+  diversified-lv--performance.csv: 1
+Mulvaney:
+  the-mulvaney-global-markets-fund-performance.csv: 1
+Crabel:
+  crabel-advanced-trend-1x-performance.csv: 1
+Lynx:
+  The Lynx Program: 1
+Transtrend:
+  dtp-enhanced-risk-usd--performance.csv: 1
