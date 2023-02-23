@@ -31,8 +31,20 @@ kable(table)  %>% kable_classic()
 
 ```{r}
 table <- read_excel('presentations/tables.xlsx', sheet = 'pros-cons')
+table
 table[is.na(table)] <- ' '
 kable(table[1:3,])  %>% kable_classic()
 kable(table[5:8,])  %>% kable_classic()
 ```
+```{r}
+library(tidyr)
+library(dplyr)
+table <- read_excel('presentations/tables.xlsx', sheet = 'MAR_Ranking', na = "HOLA") %>%
+  pivot_longer(-Manager) %>% mutate(value = as.character(value)) %>%
+  mutate(value = ifelse(is.na(value)," ",value))
 
+table <- table %>% pivot_wider(names_from = name,values_from = value)
+library(formattable)
+formattable(table, list(area(col = 2:23) ~ color_tile("green", "blue")))
+kable(table)  %>% kable_classic_2(, html_font = 'eb garamond')
+```
