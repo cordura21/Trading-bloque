@@ -1,0 +1,209 @@
+---
+title: "Agregar Trend Following a un portafolio"
+format:
+  html:
+    fontsize: 1.5em
+    css: style.css
+---
+
+```{r}
+library(xts)
+```
+
+# Conclusiones
+
+-   Trend Following mejora el retorno y el riesgo de un portafolio 'buy and hold'.
+-   La selección de un manager depende del objetivo: a) tener Trend Following o b) cubrir riesgos de accidente.
+-   Hay dos tipos de managers: 'vieja escuela' e 'institucionales'.
+-   De acuerdo al tipo de manager es el porcentaje del portafolio a invertir.
+
+# Fondos seleccionados
+
+La característica principal para elegir un fondo es que tenga un track record largo haciendo lo mismo.
+
+-   Fondos de la 'vieja escuela'.
+
+    -   Mulvaney, Dunn, Chesapeake.
+
+-   Fondos 'institucionales'.
+
+    -   Lynx, Transtrend, Crabel.
+
+# Mejoras a un portafolio
+
+# Backtest de AQR de 100 años
+
+![](images/aqr%20trend%20following%20century%20backtest.png)
+
+En esl backtest, agregar una estrategia de Trend Following (Time-Series Momentum) a un portafolio 60/40 mehora el retorno ajustado a riesgo de x0.39 a x0.55.
+
+Esto es un backtest con un retorno de 7.3% anual y volatilidad de 9.7% desde 1880 a 2016 (es decir una estrategia de baja volatilidad). La alocación es 20% a trend following.
+
+# Trend Following ayuda en las crisis
+
+![](images/trend%20following%20ayuda%20en%20las%20crisis.png)
+
+# Efectos sobre un portafolio
+
+# ![](images/alocacio%CC%81n%20cartera%20agresiva.png)Efectos sobre un portafolio
+
+![](images/agregando%20trend%20following%20a%20benchmark.png)
+
+# Efectos sobre un portafolio
+
+# ![](images/efecto%20de%20tf%20en%20el%20benchmark.png)Efectos sobre un portafolio
+
+![](images/efecto%20de%20mezclar%20el%20benchmark%20con%20trend%20following.png)
+
+# Contribución al portafolio
+
+![](images/contribucio%CC%81n%20al%20benchmark.png)
+
+# Características de un buen trend follower
+
+-   Tiene un programa activo, con un mínimo de inversión bajo.
+
+-   Tiene al menos 15 años de historia.
+
+-   Trend Following es la estrategia dominante de su programa.
+
+-   Es totalmente sistemático y usa reglas cuantitativas para entrar y salir de posiciones.
+
+-   Está globalmente diversificado e invierte en una amplia selección de clases de activos.
+
+# Buenos Trend Followers
+
+![](images/top%20funds%20by%20mar%2015%20years.png)
+
+Estos fondos tenían 15 años de track record en el año 2000. Para cada año muestra el ranking de los 5 mejores fondos por ratio MAR.
+
+# Fondos vieja escuela
+
+Vieja escuela:
+
+-   Ejecutan la estrategia en forma pura.
+
+-   Tienen grandes movimientos.
+
+-   Se diferencian en el corto plazo.
+
+-   Pueden tener riesgo key-person.
+
+# Fondos institucionales
+
+-   Son más predecibles
+
+-   Se mueven menos
+
+-   A veces se 'quedan atrás'
+
+-   La continuidad de negocio es más segura
+
+# Managers grandes: negocio
+
+Sobre un total de \$140 billones de dólares
+
+![](images/managers%20grandes.png)
+
+# Managers grandes: sus fondos
+
+![](images/big%20managers.png)
+
+# Equilibrio entre management fee y performance fee
+
+\[mostrar el efecto de un management fee alto\]
+
+# Riesgo de negocio en managers 'Vieja Escuela'
+
+```{r}
+mulvaney = read.csv('../data importers/iasg/the-mulvaney-global-markets-fund-performance.csv')
+library(lubridate)
+mulvaney$date <- Sys.Date()
+year(mulvaney$date) <- mulvaney$Year
+month(mulvaney$date) <- mulvaney$Month
+mulvaney <- xts(mulvaney$Assets / 1000000,mulvaney$date)
+plot.xts(mulvaney, main = 'MULVANEY: Asset Under management ( mm de U$S)', type = 'h')
+```
+
+Los fondos más volátiles pierden muchos activos en momentos de caída.
+
+# Riesgo de negocio: efecto en el retorno (\$100)
+
+-   ESCENARIO A: Mismo manager
+
+    -   Resultado de -\$20 + Resultado de +\$20 = \$100
+
+-   ESCENARIO B: Cambio de manager
+
+    -   Resultado de -\$20 -\>
+
+    -   Cambio de manager
+
+    -   Resultado de +20 - success fee de \$4 nuevo manager = \$96
+
+Supone un success fee del 20%.
+
+Al cambiar de manager se pierde el 'high watermark'.
+
+# Riesgo de negocio y High Watermark
+
+![](images/high%20watermark.png)Asumiendo un performance fee de 20%
+
+# Idiosincracia y 'path dependence'
+
+![](images/idiosincracia%20de%20los%20managers.png)
+
+# Fondos recomendados. Fees y otros datos.
+
+```{r}
+library(readxl)
+library(reactable)
+library(dplyr)
+temp_table <- read_excel('../presentations/Tabla Fondos.xlsx')
+
+  reactable(temp_table,
+            columns = list(
+              AUM = colDef(format = colFormat(prefix = "$", separators = TRUE, digits = 0)),
+              M_Fee = colDef(format = colFormat(percent = TRUE, digits = 1)),
+              P_Fee = colDef(format = colFormat(percent = TRUE, digits = 0))      
+            ))
+
+```
+
+# Fondos individuales
+
+# Crabel
+
+![](images/Crabel%20Advanced%20Trend.png)
+
+Es un fondo nuevo, pero vemos lo que hace. Nosotros fuimos los primeros inversores.
+
+# Crabel mantiene su perfil de volatilidad
+
+![](images/Crabel%20Advanced%20Trend%20Volatility.png)
+
+# Winton cambió el fondo
+
+```{r}
+library(xts)
+winton <- readRDS('../data results/Winton Multi Strategy.RDS')
+plot.xts(winton$`Winton Multi Strategy`$data$running_volatility)
+```
+
+# Winton cambió de fondo
+
+# ![](images/winton%20innovations.png)Bill Dunn: el track record más largo
+
+![](images/DUNN-Information-February-2021.webp)
+
+# Bill Dunn: Riesgo idiosincrático
+
+# Bill Dunn: el negocio
+
+![](images/Bill%20Dunn%20AUM.png)
+
+# Fondos chicos
+
+![](images/tabla%20fondos%20chicos.png)
+
+# Mutual Funds y ETF
