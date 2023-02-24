@@ -39,6 +39,8 @@ kable(table[5:8,])  %>% kable_classic()
 ```{r}
 library(tidyr)
 library(dplyr)
+library(readxl)
+library(kableExtra)
 table <- read_excel('presentations/tables.xlsx', sheet = 'MAR_Ranking', na = "HOLA") %>%
   pivot_longer(-Manager) %>% mutate(value = as.character(value)) %>%
   mutate(value = ifelse(is.na(value)," ",value))
@@ -46,5 +48,5 @@ table <- read_excel('presentations/tables.xlsx', sheet = 'MAR_Ranking', na = "HO
 table <- table %>% pivot_wider(names_from = name,values_from = value)
 library(formattable)
 formattable(table, list(area(col = 2:23) ~ color_tile("green", "blue")))
-kable(table)  %>% kable_classic_2(, html_font = 'eb garamond')
+kable(table, align=rep('c', 22))  %>% kable_paper(html_font = 'eb garamond',"striped")
 ```

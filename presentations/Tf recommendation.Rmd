@@ -23,7 +23,7 @@ table$`Retorno sobre cash` <- percent(table$`Retorno sobre cash`,digits = 1 )
 table$`Volatilidad Anualizada` <- percent(table$`Volatilidad Anualizada`,digits = 1 )
 table$`Máxima Caída` <- percent(table$`Máxima Caída`,digits = 1 )
 table$`Sharpe (neto de fees)` <- digits(table$`Sharpe (neto de fees)`,digits = 2 )
-knitr::kable(table,format.args = list(big.mark = ",")) %>% kable_classic()
+knitr::kable(table,format.args = list(big.mark = ",")) %>% kable_classic(html_font = 'eb garamond',"striped")
 
 ```
 
