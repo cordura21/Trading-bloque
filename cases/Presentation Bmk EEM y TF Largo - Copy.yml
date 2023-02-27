@@ -1,0 +1,35 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Full Bmk:
+  Benchmark EEM Indexes: 1
+Full TF:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.25
+  diversified-lv--performance.csv: 0.25
+  classic-performance.csv: 0.25
+  evolution-strategies-performance.csv: 0.25
+Bmk 90 y TF 10:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.025
+  diversified-lv--performance.csv: 0.025
+  classic-performance.csv: 0.025
+  evolution-strategies-performance.csv: 0.025
+  Benchmark EEM Indexes: 0.9
+Bmk 80 y TF 20:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.05
+  diversified-lv--performance.csv: 0.05
+  classic-performance.csv: 0.05
+  evolution-strategies-performance.csv: 0.05
+  Benchmark EEM Indexes: 0.8
+Bmk 70 y TF 30:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.075
+  diversified-lv--performance.csv: 0.075
+  classic-performance.csv: 0.075
+  evolution-strategies-performance.csv: 0.075
+  Benchmark EEM Indexes: 0.7
+Bmk 60 y TF 40:
+  world-monetary-and-agriculture-program-wma--performance.csv: 0.1
+  diversified-lv--performance.csv: 0.1
+  classic-performance.csv: 0.1
+  evolution-strategies-performance.csv: 0.1
+  Benchmark EEM Indexes: 0.6

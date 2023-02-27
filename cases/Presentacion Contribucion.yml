@@ -1,0 +1,18 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+TF Clasico 10 y Bmk 25 y Uninvsted 65:
+  the-mulvaney-global-markets-fund-performance.csv: 0.1
+  Benchmark EEM Indexes: 0.25
+  Uninvested: 0.65
+TF Institucional 10 y Bmk 25 y Uninvsted 65:
+  The Lynx Program: 0.05
+  dtp-enhanced-risk-usd--performance.csv: 0.05
+  Benchmark EEM Indexes: 0.25
+  Uninvested: 0.65
+Lynx 5, Mulvaney 5 y Bmk 25 y Uninvsted 65:
+  The Lynx Program: 0.05
+  the-mulvaney-global-markets-fund-performance.csv: 0.05
+  Benchmark EEM Indexes: 0.25
+  Uninvested: 0.65
