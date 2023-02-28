@@ -18,4 +18,5 @@ for(portfolio in portfolios){
 
 case_returns <- funds[case_params$Period,case_assets] %>% na.omit()
 
+
 iLoop <- 1 # Just for easier debugging
