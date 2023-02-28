@@ -1,4 +1,6 @@
-vol_adjust <- menu(c("Yes", "No"), title=paste0("Adjust all volatilities to ","'",names(portfolios)[1],"'?"))
+vol_choices <- c("No adjustment", names(portfolio))
+
+vol_adjust <- menu(vol_choices, title= "Adjust volatilities to:")
 
 if(vol_adjust == 1){
   # Adjust volatilities
