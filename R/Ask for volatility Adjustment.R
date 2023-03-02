@@ -1,7 +1,12 @@
-vol_choices <- c("No adjustment", names(portfolio))
+vol_choices <- c(TRUE,FALSE)
 
-vol_adjust <- menu(vol_choices, title= "Adjust volatilities to:")
+vol_adjust <- menu(TRUE,FALSE, title= "Adjust Volatility to first portfolio?")
 
-if(vol_adjust == 1){
+if(vol_adjust > 1){
   # Adjust volatilities
+  
+  main_portfolio <- vol_choices[vol_adjust]
+  
+  
+  
 }

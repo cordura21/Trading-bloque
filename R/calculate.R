@@ -26,6 +26,23 @@ for(iLoop  in 1:length(portfolios)) {
   port$data$portfolio_returns <- port$lists$portfolio_returns_verbose$returns
   names(port$data$portfolio_returns) <- names(portfolios)[iLoop]
   
+  # adjust volatility
+  
+  
+  if(vol_adjust == 1 && iLoop == 1){
+    
+    first_portfolio_vol <- sd(port$data$portfolio_returns)
+    
+  }
+  
+  if(vol_adjust == 1){
+    
+    this_portfolio_vol = sd(port$data$portfolio_returns)
+    vol_adj_ratio = first_portfolio_vol / this_portfolio_vol
+    port$data$portfolio_returns[,1] = port$data$portfolio_returns[,1] * vol_adj_ratio
+    
+  }
+  
   port$data$drawdown <- Drawdowns(port$data$portfolio_returns)
   port$data$running_volatility <- TTR::runSD(port$data$portfolio_returns,n = 36) * sqrt(12)
   names(port$data$running_volatility) <- names(portfolios)[iLoop]  

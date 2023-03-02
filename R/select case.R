@@ -20,3 +20,5 @@ case_returns <- funds[case_params$Period,case_assets] %>% na.omit()
 
 
 iLoop <- 1 # Just for easier debugging
+
+vol_adjust <- menu(c(TRUE,FALSE), title= "Adjust Volatility to first portfolio?")
