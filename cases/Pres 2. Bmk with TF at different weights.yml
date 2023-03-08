@@ -1,0 +1,37 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Full Benchmark:
+  Benchmark EEM Indexes: 1
+Full TF: 
+  The Lynx Program: 0.34
+  dtp-enhanced-risk-usd--performance.csv: 0.33
+  the-mulvaney-global-markets-fund-performance.csv: 0.33
+Bmk 25 & TF 25:
+  Benchmark EEM Indexes: 0.25
+  The Lynx Program: 0.09
+  dtp-enhanced-risk-usd--performance.csv: 0.08
+  the-mulvaney-global-markets-fund-performance.csv: 0.08
+  Uninvested: 0.5
+Bmk 25 & TF 15:
+  Benchmark EEM Indexes: 0.25
+  The Lynx Program: 0.05
+  dtp-enhanced-risk-usd--performance.csv: 0.05
+  the-mulvaney-global-markets-fund-performance.csv: 0.05
+  Uninvested: 0.6
+Bmk 25 & TF 10:
+  Benchmark EEM Indexes: 0.25
+  The Lynx Program: 0.034
+  dtp-enhanced-risk-usd--performance.csv: 0.033
+  the-mulvaney-global-markets-fund-performance.csv: 0.033
+  Uninvested: 0.65
+Bmk 25 & TF 5:
+  Benchmark EEM Indexes: 0.25
+  The Lynx Program: 0.0167
+  dtp-enhanced-risk-usd--performance.csv: 0.0166
+  the-mulvaney-global-markets-fund-performance.csv: 0.0167
+  Uninvested: 0.70
+Bmk 25 :
+  Benchmark EEM Indexes: 0.25
+  Uninvested: 0.75

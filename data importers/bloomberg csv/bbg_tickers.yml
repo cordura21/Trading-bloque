@@ -150,3 +150,19 @@ Cash 1y-5y:
   end.date: 20230131
   periodicity: MONTHLY
   currency: USD
+SPX INDEX:
+  csv.name: SPX
+  ticker: SPX INDEX
+  field: PX_LAST
+  start.date: 19200101
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD
+Vanguard SP Fund:
+  csv.name: Vanguard SP Fund
+  ticker: VFINX US EQUITY
+  field: PX_LAST
+  start.date: 19761231
+  end.date: 20230131
+  periodicity: MONTHLY
+  currency: USD

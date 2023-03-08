@@ -1,0 +1,12 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Full Bmk:
+  Benchmark EEM Indexes: 1
+Full Mulvaney:
+  the-mulvaney-global-markets-fund-performance.csv: 1
+Bmk 25 & Mulvaney 6:
+  Benchmark EEM Indexes: 0.25
+  the-mulvaney-global-markets-fund-performance.csv: 0.06
+  Uninvested: 0.69

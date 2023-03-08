@@ -1,0 +1,19 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Bmk 25:
+  Benchmark EEM Indexes: 0.25
+  Uninvested: 0.69
+Bmk 25 & Lynx 6:
+  Benchmark EEM Indexes: 0.25
+  The Lynx Program: 0.06
+  Uninvested: 0.69
+Bmk 25 & Transtrend 6:
+  Benchmark EEM Indexes: 0.25
+  dtp-enhanced-risk-usd--performance.csv: 0.06
+  Uninvested: 0.69
+Bmk 25 & Mulvaney 6:
+  Benchmark EEM Indexes: 0.25
+  the-mulvaney-global-markets-fund-performance.csv: 0.06
+  Uninvested: 0.69

@@ -1,0 +1,12 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Full SP:
+  Vanguard SP Fund: 1
+Full AQR TSMOM:
+  TSMOM: 1
+SP 25 & AQR TSMOM 10:
+  Vanguard SP Fund: 0.25
+  TSMOM: 0.1
+  Uninvested: 0.65

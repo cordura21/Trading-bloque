@@ -1,0 +1,12 @@
+Params:
+  Period: "::"
+  Rebalance: years
+  ShowComponents: TRUE
+Full BMK:
+  Benchmark EEM Indexes: 1
+Full AQR TSMOM:
+  TSMOM: 1
+BMK 25 & AQR TSMOM 10:
+  Benchmark EEM Indexes: 0.25
+  TSMOM: 0.1
+  Uninvested: 0.65
